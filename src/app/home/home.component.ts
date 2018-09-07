@@ -54,8 +54,8 @@ export class HomeComponent implements OnInit {
   btn ="";
   remove(i) {
     this.goals.splice(i, 1);
+    this._data.changegoal(this.goals);
     this.itemCount = this.itemCount -1;
     this.btn = "Clicked: " + this.itemCount;
-    this._data.changegoal(this.goals);
     }
 }
